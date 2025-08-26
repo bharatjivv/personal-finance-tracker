@@ -27,12 +27,12 @@ const SignUpSignIn = () => {
     setLoading(true);
     if (name != "" && email != "" && password != "" && confirmPassword != "") {
       if (password == confirmPassword) {
-        console.log(name, email, password);
+        // console.log(name, email, password);
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             // Signed up
             const user = userCredential.user;
-            console.log("user >>> ", user);
+            // console.log("user >>> ", user);
             toast.success("User Created!");
             setLoading(false);
             setName("");
@@ -46,8 +46,8 @@ const SignUpSignIn = () => {
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log("errorcode >>>", errorCode);
-            console.log("errorMsg >>>", errorMessage);
+            // console.log("errorcode >>>", errorCode);
+            // console.log("errorMsg >>>", errorMessage);
             toast.error(errorMessage);
             setLoading(false);
             // ..
@@ -63,8 +63,8 @@ const SignUpSignIn = () => {
   }
 
   function loginWithEmail() {
-    console.log(email);
-    console.log(password);
+    // console.log(email);
+    // console.log(password);
     setLoading(true);
 
     if (email != "" && password != "") {
@@ -73,7 +73,7 @@ const SignUpSignIn = () => {
           // Signed in
           const user = userCredential.user;
           toast.success("User Logged in");
-          console.log("logged in user >>>", user);
+          // console.log("logged in user >>>", user);
           setLoading(false);
           navigate("/dashboard");
           // ...
@@ -83,7 +83,7 @@ const SignUpSignIn = () => {
           const errorMessage = error.message;
           toast.error(errorMessage);
           setLoading(false);
-          console.log("couldnt sign in because of the error ", errorCode);
+          // console.log("couldnt sign in because of the error ", errorCode);
         });
     } else {
       toast.error("Enter Email and Password!");
@@ -111,7 +111,7 @@ const SignUpSignIn = () => {
         toast.success("doc created!");
         setLoading(false);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         toast.error(error.message);
         setLoading(false);
       }
@@ -130,9 +130,9 @@ const SignUpSignIn = () => {
           const credential = GoogleAuthProvider.credentialFromResult(result);
           const token = credential.accessToken;
           // The signed-in user info.
-          console.log(token);
+          // console.log(token);
           const user = result.user;
-          console.log(user);
+          // console.log(user);
           createDoc(user);
           setLoading(false);
           navigate("/dashboard");
@@ -145,12 +145,12 @@ const SignUpSignIn = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           toast.errror(errorMessage);
-          console.log(errorCode);
+          // console.log(errorCode);
           // The email of the user's account used.
           const email = error.customData.email;
           // The AuthCredential type that was used.
           const credential = GoogleAuthProvider.credentialFromError(error);
-          console.log(email, credential);
+          // console.log(email, credential);
           setLoading(false);
           // ...
         });

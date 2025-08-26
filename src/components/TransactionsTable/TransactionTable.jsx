@@ -93,11 +93,11 @@ const TransactionTable = ({
       parse(event.target.files[0], {
         header: true,
         complete: async function (results) {
-          console.log("result >>>>", results);
+          // console.log("result >>>>", results);
           // Now results.data is an array of objects representing your CSV rows
           for (const transaction of results.data) {
             //   // Write each transaction to Firebase, you can use the addTransaction function here
-            console.log("Transactions", transaction);
+            // console.log("Transactions", transaction);
             const newTransaction = {
               ...transaction,
               amount: parseInt(transaction.amount),

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: flex-start;
     overflow: hidden;
-    max-width: 100vw;
-
+    max-width: 99vw;
+    flex-wrap: wrap;
 }
 
 .charts-wrapper {

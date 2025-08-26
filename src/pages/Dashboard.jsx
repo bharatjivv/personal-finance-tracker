@@ -48,14 +48,14 @@ const Dashboard = () => {
   useEffect(() => {
     calculateBalance();
     // to be deleted later
-    console.log(
-      "income >>",
-      income,
-      "expense",
-      expense,
-      "totalBalance",
-      totalBalance
-    );
+    // console.log(
+    //   "income >>",
+    //   income,
+    //   "expense",
+    //   expense,
+    //   "totalBalance",
+    //   totalBalance
+    // );
   }, [transactions]);
 
   const calculateBalance = () => {
@@ -93,7 +93,7 @@ const Dashboard = () => {
         collection(db, `users/${user.uid}/transactions`),
         transaction
       );
-      console.log("Document written with ID: ", docRef.id);
+      // console.log("Document written with ID: ", docRef.id);
       if (!many) toast.success("Transaction Added!");
 
       setTransactions((prevTransactions) => [...prevTransactions, transaction]);
@@ -104,7 +104,7 @@ const Dashboard = () => {
       }
     }
   }
-  console.log(transactions);
+  // console.log(transactions);
 
   async function fetchTransactions() {
     setLoading(true);
@@ -118,7 +118,7 @@ const Dashboard = () => {
       });
       setTransactions(transactionsArray);
       toast.success("Transactions Fetched!");
-      console.log("Transactionsarr array : ", transactionsArray);
+      // console.log("Transactionsarr array : ", transactionsArray);
     }
     setLoading(false);
   }

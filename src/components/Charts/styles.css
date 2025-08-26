@@ -1,0 +1,22 @@
+.wrapper, .charts-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+
+}
+
+.charts-wrapper {
+    justify-content: space-between;
+    height: auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin: 2rem;
+    width: 92%;
+}
+
+.chart-box {
+    box-shadow: var(--shadow-color);
+    padding: 1rem;
+}

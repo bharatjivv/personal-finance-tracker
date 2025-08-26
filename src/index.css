@@ -1,0 +1,20 @@
+:root {
+  --theme: #2970ff;
+  --black: #000;
+  --white: #fff;
+  --shadow-color: 0px 0px 30px 8px rgba(227, 227, 227, 0.75);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0px;
+
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+    
+}

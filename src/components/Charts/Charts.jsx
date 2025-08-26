@@ -12,8 +12,8 @@ const Charts = ({ sortedTransactions }) => {
     data,
     xField: "date",
     yField: "amount",
-    width: 800,
-    height: 400,
+    width: 700,
+    height: 300,
   };
   
 
@@ -51,7 +51,7 @@ const Charts = ({ sortedTransactions }) => {
           {...config}
           onReady={(chartInstance) => (chart = chartInstance)}
         />
-      </div>{" "}
+      </div>
       <div className="chart-box">
         <h2>Your Spendings</h2>
         <Pie {...spendingconfig} onReady={(chartInstance) => (pieChart = chartInstance)} />

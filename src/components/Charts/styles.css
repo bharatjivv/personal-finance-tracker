@@ -1,7 +1,8 @@
 .charts-wrapper {
     display: flex;
-    justify-content: center;
-    border: 2px solid black;
+    justify-content: flex-start;
+    overflow: hidden;
+    max-width: 100vw;
 
 }
 
@@ -13,9 +14,11 @@
     box-shadow: var(--shadow);
     margin: 2rem;
     width: 92%;
+
 }
 
 .chart-box {
     box-shadow: var(--shadow-color);
     padding: 1rem;
+
 }
